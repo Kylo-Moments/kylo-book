@@ -17,31 +17,77 @@ html,body{
   font-family: ui-serif, Georgia, "Times New Roman", serif;
 }
 
-/* -------- HERO -------- */
+/* ---------- HERO ---------- */
 .hero{
+  position: relative;
+  overflow: hidden;
   min-height: 62vh;
-  background:
+
+  /* iPhone-safe separate background props */
+  background-image:
     linear-gradient(180deg, rgba(252,250,246,.28), rgba(252,250,246,.84)),
-    url('18BA606C-9432-4C8F-8FB6-7A070C43FC78.png') center/cover no-repeat;
+    url('18BA606C-9432-4C8F-8FB6-7A070C43FC78.png'); /* <-- If your image name is different, paste it here */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
   display:grid;
   place-items:center;
 }
+
 .hero .overlay{
   text-align:center;
   padding: 4rem 1.25rem;
+  opacity: 0;
+  animation: fadeIn 1.3s ease-out forwards;
 }
+@keyframes fadeIn { to { opacity: 1; } }
+
 h1{
   margin:0 0 .25rem 0;
   font-size: clamp(2.1rem, 6vw, 3.2rem);
   letter-spacing:.02em;
 }
 .subtitle{
-  margin:0;
-  opacity:.85;
-  font-size: clamp(1rem, 2.4vw, 1.25rem);
+  margin:.1rem 0 0 0;
+  opacity:.88;
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
+}
+.dedication{
+  margin:.5rem 0 0 0;
+  opacity:.75;
+  font-size: clamp(.95rem, 2.2vw, 1.05rem);
+  font-style: italic;
 }
 
-/* -------- CONTENT -------- */
+/* Soft bottom fade so hero blends into page */
+.hero::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:0;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(252,250,246,0), var(--paper));
+  pointer-events:none;
+}
+
+/* Floating scroll heart */
+.scroll-indicator{
+  position:absolute;
+  left:50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: #b8956a;
+  opacity:.9;
+  animation: float 2.4s ease-in-out infinite;
+  user-select:none;
+}
+@keyframes float{
+  0%,100% { transform: translate(-50%, 0); opacity:.9; }
+  50%     { transform: translate(-50%, -10px); opacity:1; }
+}
+
+/* ---------- CONTENT ---------- */
 main{ padding: 2.25rem 1.25rem 3rem; }
 .teaser{
   text-align:center;
@@ -64,18 +110,3 @@ main{ padding: 2.25rem 1.25rem 3rem; }
   gap: 14px;
 }
 .page{
-  background: linear-gradient(180deg, var(--sage), #e9efe8);
-  border-radius: var(--radius);
-  padding: 1.15rem 1.15rem;
-  box-shadow: var(--shadow);
-  font-size: clamp(1rem, 2.4vw, 1.15rem);
-  line-height:1.6;
-}
-
-/* -------- FOOTER -------- */
-footer{
-  text-align:center;
-  padding: 2.25rem 1rem 3rem;
-  color: #6c665f;
-  font-size:.95rem;
-}
