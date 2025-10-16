@@ -1,141 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kylo — A Children’s Book • Written by Her</title>
-  <meta name="description" content="A gentle children’s book born from a mother’s heart. Soft words. Warm illustrations. A keepsake Kylo will grow up with." />
-  <style>
-    :root{
-      --bg:#F5E9DA;       /* Warm Honey Cream */
-      --card:#E4D3BF;     /* Muted Sand Beige */
-      --ink:#3B3A38;      /* Charcoal Ink */
-      --muted:#6B7280;    /* Subtle text */
-      --accent:#D4B77C;   /* Dusty Gold */
-      --shadow:0 10px 20px rgba(0,0,0,.06);
-      --radius:14px;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    header{position:sticky;top:0;background:rgba(245,233,218,.9);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid #e9e2d6;z-index:10}
-    nav{max-width:980px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
-    nav .brand{display:flex;align-items:center;gap:12px;font-weight:700}
-    nav .logo{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#d9c08e,#D4B77C);color:white;box-shadow:var(--shadow)}
-    .container{max-width:980px;margin:0 auto;padding:28px 20px}
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:38px 0}
-    .stack{display:grid;gap:14px}
-    .pill{display:inline-block;background:#f1e6cc;color:#6b5d3a;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.4px}
-    h1{font-size:42px;line-height:1.1;margin:8px 0 0}
-    p.lead{font-size:18px;color:var(--muted);margin:4px 0 0}
-    .btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;border:0;border-radius:10px;padding:12px 16px;font-weight:600}
-    .btn.secondary{background:var(--accent);color:#2b2a29}
-    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
-    .grid{display:grid;gap:20px}
-    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
-    .divider{display:grid;place-items:center;margin:28px 0}
-    .divider span{letter-spacing:6px;color:#a88d5a}
-    .small{font-size:13px;color:var(--muted)}
-    footer{padding:28px 0;border-top:1px solid #e9e2d6;margin-top:32px}
-    /* hero art block uses your banner image */
-    .art{min-height:260px;border-radius:var(--radius);box-shadow:var(--shadow);
-         background-image:url('kylo_hero_banner.png');background-size:cover;background-position:center;}
-    @media (max-width: 820px){
-      .hero{grid-template-columns:1fr;gap:18px}
-      h1{font-size:34px}
-      .grid.cols-2{grid-template-columns:1fr}
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header>
-  <nav>
-    <div class="brand">
-      <div class="logo">K</div>
-      <div>Kylo’s Book</div>
-    </div>
-    <div class="links">
-      <a href="#about">About</a>
-      <a href="#updates">Updates</a>
-      <a href="#preview">Preview</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-</header>
-
-<main>
-  <section class="container hero">
-    <div class="stack">
-      <span class="pill">Written by Her</span>
+  <header class="hero" style="background-image: url('18BA606C-9432-4C8F-8F...');">
+    <div class="overlay">
       <h1>Kylo</h1>
-      <p class="lead">A Children’s Book • Written by Her</p>
-      <div class="stack" style="margin-top:8px">
-        <a class="btn secondary" href="#updates">Get launch updates</a>
-        <a class="btn" href="#preview">Read a tiny preview</a>
+      <p class="subtitle">A Children’s Book • Written by Her</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="teaser">
+      <p class="lead">Before I ever held you, I saw you.<br>Not just loved — <strong>chosen</strong> and <strong>seen</strong> by Mommy.</p>
+    </section>
+
+    <section class="flip">
+      <h2>Peek inside</h2>
+      <div class="pages">
+        <article class="page">
+          <p>Before you were here, I whispered to the sky,<br>“If love is real, let it come as a child.”</p>
+        </article>
+        <article class="page">
+          <p>I didn’t know your name yet.<br>I didn’t know your face.<br>But my heart felt a tiny spark…</p>
+        </article>
       </div>
-      <div class="small">No spam. We’ll only message you when it’s ready.</div>
-    </div>
-    <div class="art" aria-hidden="true"></div>
-  </section>
+      <p class="note">Full book coming soon • Join launch updates (button coming next)</p>
+    </section>
+  </main>
 
-  <div class="container"><div class="divider"><span>✦ ✦ ✦</span></div></div>
+  <footer class="foot">
+    <small>© <span id="y"></span> Kylo • Written by Her</small>
+  </footer>
 
-  <section id="about" class="container grid cols-2">
-    <div class="card">
-      <h2>About the Book</h2>
-      <p>Kylo’s book is a soft, lyrical children’s story that celebrates safety, love, and the bond between a mother and her son. It’s designed as a bedtime read with gentle repetition and warm visuals.</p>
-      <p class="small">Target age: 0–5 • Format: Picture book / board book style</p>
-    </div>
-    <div class="card">
-      <h2>About the Author</h2>
-      <p><i>Written by Her</i> — a mama who turned healing into words. This book is a love letter to Kylo and to every child who deserves to be loved out loud.</p>
-    </div>
-  </section>
-
-  <section id="updates" class="container">
-    <div class="card">
-      <h2>Launch Updates</h2>
-      <p>Add your email to get a one-time message when preorders open.</p>
-      <form action="#" method="post" onsubmit="alert('Demo form — replace with a Mailchimp or Google Form embed later.'); return false;">
-        <div style="display:grid;gap:12px;grid-template-columns:2fr 1fr">
-          <input type="email" placeholder="your@email.com" required
-                 style="padding:12px 14px;border:1px solid #e5e2db;border-radius:10px;background:#fff">
-          <button class="btn secondary" type="submit">Notify me</button>
-        </div>
-        <p class="small">Tip: replace this with your real signup form when you’re ready.</p>
-      </form>
-    </div>
-  </section>
-
-  <section id="preview" class="container grid cols-2">
-    <div class="card">
-      <h2>Tiny Preview</h2>
-      <p><em>“Before the sun blinked awake, Mommy whispered to the little star named Kylo: ‘I’ve been waiting for you.’ And the little star twinkled back, ‘I found you.’”</em></p>
-      <p class="small">We’ll add 2–3 spreads here when artwork is ready.</p>
-    </div>
-    <div class="card">
-      <h2>FAQ</h2>
-      <p><b>When will it launch?</b><br>We’ll announce the date via email once the book is ready.</p>
-      <p><b>What formats?</b><br>Apple Books (eBook), paperback, and a keepsake hardcover (TBD).</p>
-      <p><b>Who is it for?</b><br>Ages 0–5 (bedtime read or baby shower gift).</p>
-    </div>
-  </section>
-
-  <section id="contact" class="container">
-    <div class="card">
-      <h2>Contact</h2>
-      <p>Business / collabs / readings: <a href="mailto:hello@example.com">hello@example.com</a></p>
-      <p class="small">Replace with your real email or contact form link.</p>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="container small">
-    © <span id="y"></span> Written by Her · All rights reserved
-  </div>
-</footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
