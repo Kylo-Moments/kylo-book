@@ -15,16 +15,15 @@ html,body{
   font-family: ui-serif, Georgia, 'Times New Roman', serif;
 }
 
-.hero{
+ .hero{
   min-height: 60vh;
   background:
-    linear-gradient(...),
-    url(18BA606C-9432-4C8F-8FB6-7A070C43FC78.png) center/cover no-repeat;
-  display:grid;
-  place-items:center;
-}
-  
-  
+    linear-gradient(180deg, rgba(252,250,246,.25), rgba(252,250,246,.75)),
+    url('18BA606C-9432-4C8F-8FB6-7A070C43FC78.png') center/cover no-repeat;
+  display: grid;
+  place-items: center;
+}  
+   
   
   
   
