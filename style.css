@@ -18,9 +18,14 @@ html,body{
 .hero{
   min-height: 60vh;
   background:
-  background:
-  linear-gradient(180deg, rgba(252,250,246,.25), rgba(252,250,246,.75)),
-  url('18BA606C-9432-4C8F-8FXX-XXXXXXXXXXXX.png') center/cover no-repeat;
+    linear-gradient(...),
+    url('YOURIMAGE.png') center/cover no-repeat;
+  display:grid;
+  place-items:center;
+}
+  
+  
+  
   
   
   display:grid;
