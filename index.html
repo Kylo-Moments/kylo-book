@@ -25,6 +25,37 @@
 <section class="kylo-feature" aria-labelledby="kylo-heading">
   <div class="kylo-wrap">
     <div class="kylo-left">
+      <!-- Fallback card shows if image is missing -->
+      <div class="kylo-cover-fallback" aria-hidden="true"></div>
+
+      <img
+        src="/assets/images/kylo-book-cover.png"
+        alt="Kylo — A Children’s Book cover"
+        class="kylo-cover"
+        loading="lazy"
+        onerror="this.style.display='none'; this.previousElementSibling.style.display='block';"
+        onload="this.previousElementSibling.style.display='none'; this.style.display='block';"
+        style="display:none"
+      />
+    </div>
+
+    <div class="kylo-right">
+      <h2 id="kylo-heading" class="kylo-title">For Kylo — From Mommy</h2>
+      <p class="kylo-sub">A Children’s Book · Written by Mommy (K.M.H.)</p>
+
+      <a class="kylo-btn" href="/assets/books/Kylo_Childrens_Book_8x10.pdf" target="_blank" rel="noopener">
+        Open Book
+      </a>
+
+      <p class="kylo-series">Book Series · Nursery Line — <em>Coming Soon</em></p>
+    </div>
+  </div>
+</section>
+<hr class="soft-divider">
+    <!-- For Kylo — From Mommy (Featured Launch Block) -->
+<section class="kylo-feature" aria-labelledby="kylo-heading">
+  <div class="kylo-wrap">
+    <div class="kylo-left">
       <img
         src="/assets/images/kylo-book-cover.png"
         alt="Kylo — A Children’s Book cover"
