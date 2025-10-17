@@ -1,10 +1,1 @@
 /assets/images/kylo-book-cover.png
-<img
-  src="/assets/images/kylo-book-cover.jpg"
-  alt="Kylo — A Children’s Book cover"
-  class="kylo-cover"
-  loading="lazy"
-  onerror="this.style.display='none'; this.previousElementSibling.style.display='block';"
-  onload="this.previousElementSibling.style.display='none'; this.style.display='block';"
-  style="display:none"
-/>
