@@ -227,3 +227,84 @@ main{ padding: 2.25rem 1.25rem 3rem; }
   .kylo-wrap { grid-template-columns: 1fr; }
   .kylo-right { text-align: center; }
 }
+/* ===== Kylo Book Feature (airy, premium) ===== */
+.kylo-feature{
+  background:#f7f5f0;
+  border:1px solid #e7e2d9;
+  border-radius:14px;
+  padding:40px 28px;
+  margin:56px 0;
+}
+.kylo-wrap{
+  max-width:1100px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap:36px;
+  align-items:center;
+}
+.kylo-cover{
+  width:100%;
+  max-width:520px;
+  border-radius:12px;
+  background:#f2efe8;
+  box-shadow:0 18px 42px rgba(90,79,64,0.14);
+  display:block;
+  margin:0 auto;
+}
+/* Elegant linen fallback while image is missing */
+.kylo-cover-fallback{
+  width:100%;
+  max-width:520px;
+  aspect-ratio: 3 / 4;
+  border-radius:12px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.65), rgba(255,255,255,.4)),
+    repeating-linear-gradient(0deg, #eee7dc 0 2px, #f6f2ea 2px 6px);
+  box-shadow:0 18px 42px rgba(90,79,64,0.14);
+  position:relative;
+}
+.kylo-cover-fallback::after{
+  content:"KYLO";
+  font-weight:700;
+  letter-spacing:.2px;
+  color:#3f372e;
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-60%);
+  font-size: clamp(28px, 6vw, 56px);
+}
+.kylo-cover-fallback::before{
+  content:"For Kylo — From Mommy";
+  color:#6a5f52;
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,20%);
+  font-size: clamp(14px, 3.2vw, 20px);
+}
+
+.kylo-title{ margin:0 0 10px; font-weight:700; letter-spacing:.2px; color:#3f372e;}
+.kylo-sub{ margin:0 0 26px; color:#6a5f52; line-height:1.55;}
+.kylo-btn{
+  display:inline-block; padding:12px 20px;
+  background:#f1ece4; border:1px solid #bdb3a6; border-radius:10px;
+  color:#4e4338; text-decoration:none; font-weight:600;
+  transition:transform .15s ease, filter .15s ease;
+}
+.kylo-btn:hover{ transform:translateY(-1px); filter:brightness(.98); }
+.kylo-series{ margin-top:20px; color:#7a6f62; }
+
+/* gentle divider */
+.soft-divider{
+  border:0; height:1px;
+  background:linear-gradient(to right, rgba(0,0,0,0), #e9e4db, rgba(0,0,0,0));
+  margin:42px 0;
+}
+
+/* mobile */
+@media (max-width: 820px){
+  .kylo-wrap{ grid-template-columns:1fr; gap:24px;}
+  .kylo-right{ text-align:center;}
+  .kylo-feature{ padding:28px 18px; margin:44px 0;}
+  .kylo-cover, .kylo-cover-fallback{ max-width:420px;}
+}
