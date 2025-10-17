@@ -115,8 +115,9 @@ main{ padding: 2.25rem 1.25rem 3rem; }
   background: #f7f5f0; /* soft cream */
   border: 1px solid #e7e2d9;
   border-radius: 12px;
-  padding: 24px;
-  margin: 32px 0;
+  padding: 40px 28px; margin: 56px 0; max-width: 520px; bigger shadow, etc.)
+
+  
 }
 
 .kylo-wrap {
