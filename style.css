@@ -168,3 +168,61 @@ main{ padding: 2.25rem 1.25rem 3rem; }
   .kylo-wrap { grid-template-columns: 1fr; }
   .kylo-right { text-align: center; }
 }
+/* Kylo Book Feature */
+.kylo-feature {
+  background: #f7f5f0;
+  border: 1px solid #e7e2d9;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 32px 0;
+}
+
+.kylo-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.kylo-cover {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(90,79,64,0.12);
+  display: block;
+  margin: 0 auto;
+}
+
+.kylo-right h2 {
+  margin: 0 0 8px;
+  font-weight: 600;
+  color: #3f372e;
+}
+
+.kylo-sub {
+  margin: 0 0 20px;
+  color: #6a5f52;
+}
+
+.kylo-btn {
+  display: inline-block;
+  padding: 12px 18px;
+  background: #f1ece4;
+  border: 1px solid #bdb3a6;
+  border-radius: 8px;
+  color: #4e4338;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.kylo-btn:hover { filter: brightness(0.98); }
+
+.kylo-series {
+  margin-top: 16px;
+  color: #7a6f62;
+}
+
+@media (max-width: 820px) {
+  .kylo-wrap { grid-template-columns: 1fr; }
+  .kylo-right { text-align: center; }
+}
